@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hardil Singh — CTO & Lead Engineer · Blockchain & Web3</title>
+<meta name="description" content="Hardil Singh — CTO & Lead Engineer. 8.5 years building production crypto infrastructure: MPC custody, multi-chain payments, DeFi & on-chain trading. Remote, EU+US overlap.">
+<meta property="og:title" content="Hardil Singh — CTO & Lead Engineer · Blockchain & Web3">
+<meta property="og:description" content="8.5 years building production crypto infrastructure — MPC custody, multi-chain payments, DeFi & on-chain trading.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --ink:#12161d; --body:#2b3240; --muted:#5f6b7a; --rule:#e2e6ec;
+    --accent:#0e5a63; --accent-2:#0c7d78; --soft:#eef4f4; --paper:#ffffff; --wash:#f6f8f9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#f3f6f8; --body:#c3ccd6; --muted:#8b98a8; --rule:#242b35;
+           --accent:#5fd3cf; --accent-2:#7fe0d3; --soft:#12242a; --paper:#0e1218; --wash:#131922; }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--body);
+    font-family:"Helvetica Neue",Arial,system-ui,sans-serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 24px;}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif; color:var(--ink); font-weight:600; letter-spacing:.2px;}
+  .eyebrow{font-size:12px; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); font-weight:700;}
+
+  /* hero */
+  header.hero{padding:80px 0 56px; border-bottom:1px solid var(--rule);
+    background:radial-gradient(120% 90% at 85% -10%, var(--soft) 0%, transparent 60%);}
+  .hero h1{font-size:clamp(36px,7vw,58px); line-height:1.02; margin:14px 0 6px; text-wrap:balance;}
+  .hero .role{font-size:clamp(17px,2.4vw,22px); color:var(--accent); font-weight:600; margin-bottom:20px;}
+  .hero p.lede{font-size:clamp(16px,2vw,19px); max-width:64ch; margin:0 0 26px;}
+  .meta{display:flex; flex-wrap:wrap; gap:8px 18px; font-size:14px; color:var(--muted); margin-bottom:26px;}
+  .meta b{color:var(--ink); font-weight:600;}
+  .links{display:flex; flex-wrap:wrap; gap:10px;}
+  .btn{display:inline-flex; align-items:center; gap:7px; padding:9px 15px; border:1px solid var(--rule);
+    border-radius:8px; font-size:14px; font-weight:600; color:var(--ink); background:var(--paper); transition:.15s;}
+  .btn:hover{border-color:var(--accent); color:var(--accent); text-decoration:none; transform:translateY(-1px);}
+  .btn.primary{background:var(--accent); color:#fff; border-color:var(--accent);}
+  .btn.primary:hover{background:var(--accent-2); color:#fff;}
+
+  /* sections */
+  section{padding:56px 0;}
+  .sec-head{display:flex; align-items:baseline; justify-content:space-between; gap:16px;
+    border-bottom:1px solid var(--rule); padding-bottom:12px; margin-bottom:30px; flex-wrap:wrap;}
+  .sec-head h2{font-size:clamp(22px,3vw,28px); margin:0;}
+  .sec-head .count{font-size:13px; color:var(--muted);}
+
+  /* project grid */
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:18px;}
+  .card{border:1px solid var(--rule); border-radius:12px; padding:22px; background:var(--paper);
+    display:flex; flex-direction:column; transition:.18s; position:relative; overflow:hidden;}
+  .card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--accent); opacity:.0; transition:.18s;}
+  .card:hover{border-color:var(--accent); transform:translateY(-3px); box-shadow:0 10px 30px rgba(14,90,99,.10);}
+  .card:hover::before{opacity:1;}
+  .card .tag{font-size:11px; text-transform:uppercase; letter-spacing:1.4px; color:var(--accent); font-weight:700;}
+  .card h3{font-size:20px; margin:8px 0 8px;}
+  .card p{font-size:14.5px; margin:0 0 16px; color:var(--body); flex:1;}
+  .chips{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px;}
+  .chip{font-size:11.5px; padding:3px 9px; border-radius:20px; background:var(--wash); color:var(--muted); border:1px solid var(--rule);}
+  .card .foot{display:flex; align-items:center; gap:12px; font-size:13.5px;}
+  .live{font-weight:700; color:var(--accent);}
+  .priv{color:var(--muted); font-weight:600;}
+
+  /* stack */
+  .stack{display:grid; grid-template-columns:130px 1fr; gap:10px 18px; font-size:15px;}
+  .stack dt{color:var(--accent); font-weight:700;}
+  .stack dd{margin:0;}
+  @media(max-width:560px){ .stack{grid-template-columns:1fr; gap:2px 0;} .stack dt{margin-top:12px;} }
+
+  /* past */
+  .past{display:flex; gap:16px; flex-wrap:wrap;}
+  .past .item{flex:1 1 260px; border:1px solid var(--rule); border-radius:12px; padding:18px 20px; background:var(--wash);}
+  .past .item b{color:var(--ink);}
+
+  footer{border-top:1px solid var(--rule); padding:40px 0 56px; color:var(--muted); font-size:14px;}
+  footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center;}
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">CTO &amp; Lead Engineer · Blockchain &amp; Web3</div>
+      <h1>Hardil Singh</h1>
+      <div class="role">Production crypto infrastructure, shipped end to end.</div>
+      <p class="lede">8.5 years building and leading — MPC custodial wallets, multi-chain payment rails,
+      DeFi protocols and real-money trading across EVM, Bitcoin, Solana and Tron. Currently CTO at
+      BitDecentro. Everything below is live and clickable.</p>
+      <div class="meta">
+        <span>📍 Remote · India <b>(IST, UTC+5:30)</b></span>
+        <span>🕑 Overlap <b>EU + US hours</b></span>
+        <span>⚙️ <b>Solidity · TypeScript · React · Node</b></span>
+      </div>
+      <div class="links">
+        <a class="btn primary" href="mailto:hardilsingh87@gmail.com">✉️ hardilsingh87@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/hardil-singh-a0726788" target="_blank" rel="noopener">in · LinkedIn</a>
+        <a class="btn" href="https://github.com/hardil-bitdecentro" target="_blank" rel="noopener">⌥ GitHub</a>
+        <a class="btn" href="https://bitdecentro.com" target="_blank" rel="noopener">🌐 BitDecentro</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head"><h2>Selected Work</h2><span class="count">7 products · built &amp; shipped</span></div>
+      <div class="grid">
+
+        <article class="card">
+          <span class="tag">Payments</span>
+          <h3>Bitopayments</h3>
+          <p>Multi-chain crypto payment gateway — merchant checkout, dashboards, backend services and smart contracts, across EVM, Solana and Tron.</p>
+          <div class="chips"><span class="chip">EVM</span><span class="chip">Solana</span><span class="chip">Tron</span><span class="chip">NestJS</span><span class="chip">Next.js</span></div>
+          <div class="foot"><a class="live" href="https://bitopayments.com" target="_blank" rel="noopener">bitopayments.com ↗</a></div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Custody</span>
+          <h3>MPC Custodial Wallet</h3>
+          <p>B2B threshold-MPC custody with a swappable signing core and configurable per-share key storage. EVM + Bitcoin, multi-tenant, USD policy engine.</p>
+          <div class="chips"><span class="chip">MPC</span><span class="chip">Threshold sig</span><span class="chip">EVM</span><span class="chip">Bitcoin</span><span class="chip">AWS</span></div>
+          <div class="foot"><a class="live" href="https://mpc.bitopayments.com" target="_blank" rel="noopener">mpc.bitopayments.com ↗</a></div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Trading</span>
+          <h3>Palladium</h3>
+          <p>Real-money B-book trading platform with an append-only, hash-chained &amp; signed ledger; per-instrument margin, liquidation and PnL.</p>
+          <div class="chips"><span class="chip">Trading</span><span class="chip">Ledger</span><span class="chip">Redis/BullMQ</span><span class="chip">Postgres</span></div>
+          <div class="foot"><a class="live" href="https://palladium.bitdecentro.xyz" target="_blank" rel="noopener">palladium.bitdecentro.xyz ↗</a></div>
+        </article>
+
+        <article class="card">
+          <span class="tag">RWA · Real-World Assets</span>
+          <h3>Doma</h3>
+          <p>On-chain retail of physical gold &amp; silver — RWA with on-chain settlement. Built on-site with mTransform, Abu Dhabi.</p>
+          <div class="chips"><span class="chip">RWA</span><span class="chip">On-chain</span><span class="chip">Gold/Silver</span><span class="chip">React</span></div>
+          <div class="foot"><a class="live" href="https://doma.io" target="_blank" rel="noopener">doma.io ↗</a></div>
+        </article>
+
+        <article class="card">
+          <span class="tag">SaaS · AI-first</span>
+          <h3>DecentroHR</h3>
+          <p>Multi-tenant AI-first HRMS/ERP — payroll, org, statutory compliance and billing, with row-level-security tenancy built to scale.</p>
+          <div class="chips"><span class="chip">Multi-tenant</span><span class="chip">RLS</span><span class="chip">Next.js</span><span class="chip">Drizzle</span><span class="chip">AI</span></div>
+          <div class="foot"><a class="live" href="https://decentrohr.com" target="_blank" rel="noopener">decentrohr.com ↗</a></div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Gaming</span>
+          <h3>Bestwining</h3>
+          <p>Provably-fair real-money gaming platform — per-round CSPRNG seeds and a tamper-evident, audited ledger.</p>
+          <div class="chips"><span class="chip">Provably-fair</span><span class="chip">CSPRNG</span><span class="chip">Audited ledger</span><span class="chip">WebSockets</span></div>
+          <div class="foot"><span class="priv">Private · demo on request</span></div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Web3 Tooling</span>
+          <h3>Token Deployer</h3>
+          <p>Multi-chain ERC-20 / TRC-20 token deployer (CLI) with a deployer-only timed-burn expiry model and Docker-based test suite.</p>
+          <div class="chips"><span class="chip">Solidity</span><span class="chip">ERC-20</span><span class="chip">TRC-20</span><span class="chip">Foundry</span><span class="chip">CLI</span></div>
+          <div class="foot"><span class="priv">Private · demo on request</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" style="background:var(--wash); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);">
+    <div class="wrap">
+      <div class="sec-head"><h2>Stack</h2></div>
+      <dl class="stack">
+        <dt>Blockchain</dt><dd>Solidity · Foundry · OpenZeppelin · Ethers / Web3.js · MPC threshold signing · DeFi · MetaMask · WalletConnect · EVM · Bitcoin/UTXO · Solana · Tron</dd>
+        <dt>Full-stack</dt><dd>TypeScript · React · Next.js · React Native · Node.js · NestJS · GraphQL · WebSockets</dd>
+        <dt>Data &amp; infra</dt><dd>PostgreSQL · MongoDB · Redis / BullMQ · Prisma · Drizzle · AWS · GCP · Docker · Kubernetes · Terraform · GitHub Actions</dd>
+        <dt>Security</dt><dd>Single audited money choke-point · hash-chained &amp; signed ledgers · httpOnly cookie sessions + CSRF + TOTP 2FA · cross-cloud secrets (AWS + GCP)</dd>
+        <dt>Ways of working</dt><dd>Remote-first · async · AI-augmented (Claude / agentic) — ~50% faster delivery</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="past">
+    <div class="wrap">
+      <div class="sec-head"><h2>Also built</h2></div>
+      <div class="past">
+        <div class="item"><b>TOMI Wallet</b> — decentralized mobile wallet with encrypted P2P chat · <b>70K+ downloads</b> (<a href="https://play.google.com/store/apps/details?id=com.tomiapp.production" target="_blank" rel="noopener">Google Play</a>)</div>
+        <div class="item"><b>Streak Wallet</b> — hybrid CeFi/DeFi wallet with a cross-protocol yield-rewards system</div>
+        <div class="item"><b>dApps &amp; extensions</b> — DEX, DAO &amp; staking platforms, plus a Web3 wallet browser extension</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© Hardil Singh · CTO &amp; Lead Engineer</span>
+      <span><a href="mailto:hardilsingh87@gmail.com">hardilsingh87@gmail.com</a> · <a href="https://github.com/hardil-bitdecentro" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/hardil-singh-a0726788" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
