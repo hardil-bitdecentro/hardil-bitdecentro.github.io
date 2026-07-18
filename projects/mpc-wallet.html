@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MPC Custodial Wallet — Hardil Singh</title>
+<meta name="description" content="B2B threshold-MPC custody — a swappable signing core and configurable per-share key storage.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body><div class="wrap"><div class="top">
+  <a class="nm" href="/">HARDIL SINGH</a>
+  <nav>
+    <a href="/#work">Work</a>
+    <a href="/#how">How I build</a>
+    <a href="mailto:hardilsingh87@gmail.com">Contact</a>
+  </nav>
+</div></div><div class="wrap">
+  <header class="hero" style="padding-bottom:8px;">
+    <a class="backlink" href="/#work">&larr; All work</a>
+    <div class="kicker" style="margin-top:22px;">Key management · custody / 02</div>
+    <h1 style="font-size:clamp(38px,7vw,64px);">MPC Custodial Wallet</h1>
+    <p class="sub">B2B threshold-MPC custody — a swappable signing core and configurable per-share key storage.</p>
+    <div class="detail-meta">
+      <div><span>Role</span><b>CTO &amp; Lead Engineer</b></div>
+      <div><span>Ownership</span><b>End to end — design to deploy</b></div>
+      <div><span>Where</span><b>BitDecentro · 2026</b></div>
+      <div><span>Live</span><b><a href="https://mpc.bitopayments.com">mpc.bitopayments.com &nearr;</a></b></div>
+    </div>
+  </header>
+
+  <section style="padding-top:36px;">
+    <div class="body-cols"><div class="lbl">Overview</div><p class="lede">A B2B custody platform where private keys never exist as a whole. Signing is a threshold-MPC ceremony split across parties, behind a deliberately frozen &#x27;signing seam&#x27; so the MPC provider can be swapped without touching product code.</p></div>
+    <div class="body-cols"><div class="lbl">What I built</div><ul><li>Designed a frozen signing seam — the abstraction that isolates the rest of the system from the MPC engine.</li><li>Threshold-MPC signing (Go / Taurus), EVM + Bitcoin, multi-tenant key isolation.</li><li>Configurable per-share key storage across cloud providers.</li><li>USD-denominated policy engine for approval limits; audited approval trail.</li></ul></div>
+    <div class="body-cols"><div class="lbl">Architecture</div><ul><li>Signing seam abstracts the MPC engine</li><li>Per-share key storage split across clouds</li><li>Policy + approval engine gates every signature</li></ul></div>
+    <div class="body-cols"><div class="lbl">Stack</div><div class="chips"><span>TypeScript</span><span>NestJS</span><span>Go</span><span>MPC</span><span>AWS</span><span>PostgreSQL</span></div></div>
+  </section>
+</div><div class="wrap"><footer>
+  <span>© Hardil Singh — CTO &amp; Lead Engineer</span>
+  <span><a href="mailto:hardilsingh87@gmail.com">hardilsingh87@gmail.com</a> &nbsp;/&nbsp; <a href="https://github.com/hardil-bitdecentro">GitHub</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/hardil-singh-a0726788">LinkedIn</a></span>
+</footer></div></body></html>
