@@ -12,6 +12,7 @@
   <nav>
     <a href="/#work">Work</a>
     <a href="/#how">How I build</a>
+    <a href="/#writing">Writing</a>
     <a href="mailto:hardilsingh87@gmail.com">Contact</a>
   </nav>
 </div></div><div class="wrap">
@@ -104,6 +105,38 @@
     <h3 style="font-size:19px;margin:44px 0 4px;letter-spacing:-.01em;">Reference architecture</h3>
     <p style="color:var(--sub);font-size:14px;margin:0 0 16px;">How a money-critical service is wired — the pattern behind custody, payments, trading and gaming.</p>
     <div class="arch"><div class="layer"><div class="ln">Clients</div><div class="ld">React / Next.js · React Native · browser extension — httpOnly sessions, CSRF, TOTP 2FA</div></div><div class="layer"><div class="ln">API — NestJS</div><div class="ld">Typed REST / GraphQL + WebSockets; auth guard; request path kept fast and decoupled</div></div><div class="layer hot"><div class="ln">Audited choke-point</div><div class="ld">Every money / state mutation routes through one audited function; the ledger is truth, caches mirror it</div></div><div class="layer"><div class="ln">Durable queue</div><div class="ld">Redis / BullMQ — backpressured, batched writer keeps the hot path off the DB; nothing drops under load</div></div><div class="layer hot"><div class="ln">Ledger + database</div><div class="ld">Append-only, hash-chained &amp; signed ledger (tamper-evident) + PostgreSQL; monotonic sequence, gaps detectable</div></div><div class="layer"><div class="ln">Custody — MPC</div><div class="ld">Frozen signing seam; threshold-MPC (Go / Taurus); keys never whole; per-share storage across clouds</div></div><div class="layer"><div class="ln">Secrets &amp; deploy</div><div class="ld">Cross-cloud secrets (AWS + GCP) · GHCR → compose / Terraform + ECR · Nginx + Cloudflare TLS</div></div></div>
+  </section>
+
+  <section id="writing">
+    <div class="sh"><h2>Writing</h2><span class="c"><a href="https://dev.to/hardil_singh_08a1f0abf23d" style="color:var(--sub)">dev.to &nearr;</a> / 8 posts</span></div>
+    <div class="body-cols">
+      <div class="lbl">Production<br>engineering</div>
+      <ul>
+        <li><a href="https://dev.to/hardil_singh_08a1f0abf23d/what-durable-actually-means-for-money-critical-code-5c7m">What Durable Actually Means for Money-Critical Code</a> — the guarantees behind the ledgers in Palladium and Bestwining</li>
+        <li><a href="https://dev.to/hardil_singh_08a1f0abf23d/the-auth-pattern-i-copy-into-every-new-project-now-2p9d">The Auth Pattern I Copy Into Every New Project Now</a> — the httpOnly-cookie + CSRF + TOTP baseline used across Bitopayments and the MPC wallet</li>
+      </ul>
+    </div>
+    <div class="body-cols">
+      <div class="lbl">DevOps<br>&amp; security</div>
+      <ul>
+        <li><a href="https://dev.to/hardil_singh_08a1f0abf23d/the-ssh-lockout-that-made-me-close-port-22-for-good-3cde">The SSH Lockout That Made Me Close Port 22 For Good</a></li>
+        <li><a href="https://dev.to/hardil_singh_08a1f0abf23d/why-my-deploy-key-lives-in-a-password-manager-not-on-disk-27l7">Why My Deploy Key Lives in a Password Manager, Not on Disk</a></li>
+      </ul>
+    </div>
+    <div class="body-cols">
+      <div class="lbl">AI-augmented<br>workflow</div>
+      <ul>
+        <li><a href="https://dev.to/hardil_singh_08a1f0abf23d/building-a-claude-code-setup-that-stops-me-from-shooting-myself-in-the-foot-3f50">Building a Claude Code Setup That Stops Me From Shooting Myself in the Foot</a> — the guardrails behind the ~50%-faster workflow above</li>
+      </ul>
+    </div>
+    <div class="body-cols">
+      <div class="lbl">Environment<br>&amp; tooling</div>
+      <ul>
+        <li><a href="https://dev.to/hardil_singh_08a1f0abf23d/one-icon-import-nearly-took-down-my-entire-wsl2-dev-environment-2l01">One Icon Import Nearly Took Down My Entire WSL2 Dev Environment</a></li>
+        <li><a href="https://dev.to/hardil_singh_08a1f0abf23d/my-terminal-became-an-ops-center-one-command-at-a-time-6c">My Terminal Became an Ops Center, One Command at a Time</a></li>
+        <li><a href="https://dev.to/hardil_singh_08a1f0abf23d/my-wsl2-vm-kept-losing-network-every-five-minutes-1319">My WSL2 VM Kept Losing Network Every Five Minutes</a></li>
+      </ul>
+    </div>
   </section>
 
   <section id="also">
