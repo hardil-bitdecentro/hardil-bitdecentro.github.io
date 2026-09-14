@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Posthaste — Hardil Singh</title>
+<meta name="description" content="Transactional email service on its own inbound and outbound mail servers — API, SDKs in five languages, load-tested with nearly a million messages.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body><div class="wrap"><div class="top">
+  <a class="nm" href="/">HARDIL SINGH</a>
+  <nav>
+    <a href="/#work">Work</a>
+    <a href="/#how">How I build</a>
+    <a href="mailto:hardilsingh87@gmail.com">Contact</a>
+  </nav>
+</div></div><div class="wrap">
+  <header class="hero" style="padding-bottom:8px;">
+    <a class="backlink" href="/#work">&larr; All work</a>
+    <div class="kicker" style="margin-top:22px;">Email infrastructure / 01</div>
+    <h1 style="font-size:clamp(38px,7vw,64px);">Posthaste</h1>
+    <p class="sub">A transactional email service for password resets, receipts and sign-in codes, running on its own inbound and outbound mail servers.</p>
+    <div class="detail-meta">
+      <div><span>Role</span><b>Founder and engineer</b></div>
+      <div><span>Ownership</span><b>Built and run it myself</b></div>
+      <div><span>Where</span><b>Own product · since Aug 2026</b></div>
+      <div><span>Live</span><b><a href="https://posthastemail.dev">posthastemail.dev &nearr;</a></b></div>
+    </div>
+  </header>
+
+  <section style="padding-top:36px;">
+    <div class="body-cols"><div class="lbl">Overview</div><p class="lede">You POST a message; Posthaste signs it with your domain's DKIM key, delivers it straight to the recipient's mail server, catches the bounce on the way back and keeps the receiving server's reply word for word. It covers sending (API or SMTP), receiving (inbound mail arrives as a signed webhook) and verification codes in one account. Marketing mail is refused on purpose, to protect the sending IP.</p></div>
+    <div class="body-cols"><div class="lbl">What I built</div><ul><li>Outbound and inbound mail servers, a 115-endpoint REST API (OpenAPI 3.1), a Next.js dashboard and a React Native app.</li><li>Per-domain DKIM signing, IP warm-up enforced when a message is accepted, bounce and complaint handling, and DMARC aggregate report ingestion. Mail passes SPF, DKIM and DMARC at Gmail.</li><li>SDKs published for TypeScript, Python, Ruby, PHP and Go, plus an MCP server so AI agents can send through scoped tools.</li></ul></div>
+    <div class="body-cols"><div class="lbl">Reliability</div><ul><li>A message counts as accepted only once it is stored: the message, its delivery job and its first event are written in one transaction before the API replies.</li><li>Load-tested on the production stack with nearly a million messages, with none lost or accepted twice. The test also showed the next bottleneck (intake and delivery competing for the same database), which is documented.</li><li>Tenants isolated with PostgreSQL row-level security; delivery and billing logs are append-only and hash-chained; message bodies encrypted with AES-256-GCM; off-site backups checked by an actual restore.</li></ul></div>
+    <div class="body-cols"><div class="lbl">Stack</div><div class="chips"><span>TypeScript</span><span>Node.js</span><span>Next.js</span><span>PostgreSQL</span><span>React Native</span><span>Docker</span><span>Nginx</span><span>Cloudflare</span><span>GitHub Actions</span></div></div>
+  </section>
+</div><div class="wrap"><footer>
+  <span>© Hardil Singh — Lead Full-Stack Engineer</span>
+  <span><a href="mailto:hardilsingh87@gmail.com">hardilsingh87@gmail.com</a> &nbsp;/&nbsp; <a href="https://github.com/hardil-bitdecentro">GitHub</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/hardil-singh-a0726788">LinkedIn</a></span>
+</footer></div></body></html>
