@@ -29,7 +29,7 @@
   </header>
 
   <section style="padding-top:36px;">
-    <div class="body-cols"><div class="lbl">Overview</div><p class="lede">A B2B custody platform where private keys never exist as a whole. Signing is a threshold-MPC ceremony split across parties, behind a deliberately frozen &#x27;signing seam&#x27; so the MPC provider can be swapped without touching product code.</p></div>
+    <div class="body-cols"><div class="lbl">Overview</div><p class="lede">A B2B custody platform where private keys never exist as a whole. Signing runs a threshold-MPC protocol, so the key is never assembled, behind a deliberately frozen &#x27;signing seam&#x27; so the MPC provider can be swapped without touching product code.</p></div>
     <div class="body-cols"><div class="lbl">What I built</div><ul><li>Designed a frozen signing seam — the abstraction that isolates the rest of the system from the MPC engine.</li><li>Threshold-MPC signing (Go / Taurus), EVM + Bitcoin, multi-tenant key isolation.</li><li>Configurable per-share key storage across cloud providers.</li><li>USD-denominated policy engine for approval limits; audited approval trail.</li></ul></div>
     <div class="body-cols"><div class="lbl">Architecture</div><ul><li>Signing seam abstracts the MPC engine</li><li>Per-share key storage split across clouds</li><li>Policy + approval engine gates every signature</li></ul></div>
     <div class="body-cols"><div class="lbl">Stack</div><div class="chips"><span>TypeScript</span><span>NestJS</span><span>Go</span><span>MPC</span><span>AWS</span><span>PostgreSQL</span></div></div>

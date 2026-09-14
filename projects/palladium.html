@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Palladium — Hardil Singh</title>
-<meta name="description" content="B-book commodity &amp; index trading with an append-only, hash-chained, signed ledger.">
+<meta name="description" content="Commodity and index trading platform built for a client, on an append-only, hash-chained ledger.">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body><div class="wrap"><div class="top">
@@ -19,18 +19,18 @@
     <a class="backlink" href="/#work">&larr; All work</a>
     <div class="kicker" style="margin-top:22px;">Trading platform / 04</div>
     <h1 style="font-size:clamp(38px,7vw,64px);">Palladium</h1>
-    <p class="sub">B-book commodity &amp; index trading with an append-only, hash-chained, signed ledger.</p>
+    <p class="sub">Commodity and index trading platform built for a client, on an append-only, hash-chained ledger.</p>
     <div class="detail-meta">
       <div><span>Role</span><b>Lead Engineer</b></div>
-      <div><span>Ownership</span><b>End to end — design to deploy</b></div>
-      <div><span>Where</span><b>BitDecentro · 2026</b></div>
+      <div><span>Ownership</span><b>Design and most of the build</b></div>
+      <div><span>Where</span><b>Client project · 2026</b></div>
       <div><span>Status</span><b>Live — demo on request</b></div>
     </div>
   </header>
 
   <section style="padding-top:36px;">
-    <div class="body-cols"><div class="lbl">Overview</div><p class="lede">A real-money B-book trading platform for commodities and indices. Correctness is enforced structurally: every money mutation flows through a single audited choke-point into an append-only, hash-chained and signed ledger that is the source of truth.</p></div>
-    <div class="body-cols"><div class="lbl">What I built</div><ul><li>Single audited choke-point for all money movement — the ledger is truth, caches only mirror it.</li><li>Append-only, hash-chained & signed ledger (tamper-evident; gaps detectable via monotonic sequence).</li><li>Per-instrument margin, liquidation and PnL.</li><li>Queue-batched writer keeps the hot path off the database — no data loss under load.</li></ul></div>
+    <div class="body-cols"><div class="lbl">Overview</div><p class="lede">A B-book trading platform for commodities and indices, built for a client. Correctness is enforced structurally: every money mutation flows through a single audited choke-point into an append-only, hash-chained ledger that is the source of truth.</p></div>
+    <div class="body-cols"><div class="lbl">What I built</div><ul><li>Single audited choke-point for all money movement — the ledger is truth, caches only mirror it.</li><li>Append-only, hash-chained ledger (tamper-evident; gaps detectable via monotonic sequence).</li><li>Per-instrument margin, liquidation and PnL.</li><li>Queue-batched writer keeps the hot path off the database — no data loss under load.</li></ul></div>
     <div class="body-cols"><div class="lbl">Architecture</div><ul><li>Choke-point → durable queue (BullMQ) → batched writer</li><li>Hash-chained ledger + PostgreSQL of record</li><li>Real-time price feed feeding margin/liquidation</li></ul></div>
     <div class="body-cols"><div class="lbl">Stack</div><div class="chips"><span>TypeScript</span><span>NestJS</span><span>Next.js</span><span>PostgreSQL</span><span>Redis/BullMQ</span><span>Drizzle</span></div></div>
   </section>

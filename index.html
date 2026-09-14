@@ -39,7 +39,7 @@
 
   <section id="work">
     <div class="sh"><h2>Selected Work</h2><span class="c">07 products</span></div>
-    <p class="lede" style="margin:22px 0 24px;color:var(--sub);font-size:15px;">Lead engineer on each, from the data model to deployment. Bitopayments was co-built with a partner; Doma was client work at Antier.</p>
+    <p class="lede" style="margin:22px 0 24px;color:var(--sub);font-size:15px;">Lead engineer on each, from the data model to deployment. Bitopayments was co-built with a partner; Palladium was built for a client; Doma was client work at Antier.</p>
     <div class="index">
     <a class="row" href="/projects/posthaste.html">
       <div class="num">01</div>
@@ -66,7 +66,7 @@
       <div class="num">04</div>
       <div>
         <div class="rowtop"><div class="nm">Palladium</div><div class="side"><span class="status live">Live</span><span class="go">Case study &rarr;</span></div></div>
-        <div class="cat">Trading platform</div>
+        <div class="cat">Trading platform · client project</div>
         <div class="desc">Commodity and index trading on an append-only, hash-chained ledger: margin, liquidation and P&amp;L.</div>
       </div>
     </a><a class="row" href="/projects/doma.html">
@@ -104,7 +104,7 @@
 
     <h3 style="font-size:19px;margin:44px 0 4px;letter-spacing:-.01em;">Reference architecture</h3>
     <p style="color:var(--sub);font-size:14px;margin:0 0 16px;">How a money-critical service is wired — the pattern behind custody, payments, trading and email.</p>
-    <div class="arch"><div class="layer"><div class="ln">Clients</div><div class="ld">React / Next.js · React Native · browser extension — httpOnly sessions, CSRF, TOTP 2FA</div></div><div class="layer"><div class="ln">API — NestJS</div><div class="ld">Typed REST / GraphQL + WebSockets; auth guard; request path kept fast and decoupled</div></div><div class="layer hot"><div class="ln">Audited choke-point</div><div class="ld">Every money / state mutation routes through one audited function; the ledger is truth, caches mirror it</div></div><div class="layer"><div class="ln">Durable queue</div><div class="ld">Redis / BullMQ — backpressured, batched writer keeps the hot path off the DB; nothing drops under load</div></div><div class="layer hot"><div class="ln">Ledger + database</div><div class="ld">Append-only, hash-chained &amp; signed ledger (tamper-evident) + PostgreSQL; monotonic sequence, gaps detectable</div></div><div class="layer"><div class="ln">Custody — MPC</div><div class="ld">Frozen signing seam; threshold-MPC (Go / Taurus); keys never whole; per-share storage across clouds</div></div><div class="layer"><div class="ln">Secrets &amp; deploy</div><div class="ld">Cross-cloud secrets (AWS + GCP) · GHCR → compose / Terraform + ECR · Nginx + Cloudflare TLS</div></div></div>
+    <div class="arch"><div class="layer"><div class="ln">Clients</div><div class="ld">React / Next.js · React Native · browser extension — httpOnly sessions, CSRF, TOTP 2FA</div></div><div class="layer"><div class="ln">API — NestJS</div><div class="ld">Typed REST / GraphQL + WebSockets; auth guard; request path kept fast and decoupled</div></div><div class="layer hot"><div class="ln">Audited choke-point</div><div class="ld">Every money / state mutation routes through one audited function; the ledger is truth, caches mirror it</div></div><div class="layer"><div class="ln">Durable queue</div><div class="ld">Redis / BullMQ — backpressured, batched writer keeps the hot path off the DB; nothing drops under load</div></div><div class="layer hot"><div class="ln">Ledger + database</div><div class="ld">Append-only, hash-chained ledger (tamper-evident) + PostgreSQL; monotonic sequence, gaps detectable</div></div><div class="layer"><div class="ln">Custody — MPC</div><div class="ld">Frozen signing seam; threshold-MPC (Go / Taurus); keys never whole; per-share storage across clouds</div></div><div class="layer"><div class="ln">Secrets &amp; deploy</div><div class="ld">Cross-cloud secrets (AWS + GCP) · GHCR → compose / Terraform + ECR · Nginx + Cloudflare TLS</div></div></div>
   </section>
 
   <section id="writing">
